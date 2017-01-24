@@ -13,35 +13,22 @@ import {
     ScrollView,
     Navigator
 } from 'react-native';
+import FirstPageComponent from './FirstPageComponent';
 
 export default class MyNavigator extends Component {
-  render() {
-    let defaultName='List';
-    let defaultComponent=List;
-    return (
-        <Navigator
-            initialRoute={{ name: defaultName, component: defaultComponent }}
-            //配置场景
-            configureScene=
-                {
-            (route) => {
-
-            //这个是页面之间跳转时候的动画，具体有哪些？可以看这个目录下，有源代码的: node_modules/react-native/Libraries/CustomComponents/Navigator/NavigatorSceneConfigs.js
-
-            return Navigator.SceneConfigs.VerticalDownSwipeJump;
-          }
-          }
-            renderScene={
-            (route, navigator) =>
-             {
-            let Component = route.component;
-            return <Component {...route.params} navigator={navigator} />
-          }
-          } />
-
-
-    );
-  }
+    render() {
+        let defaultName = 'FirstPageComponent';
+        let defaultComponent = FirstPageComponent;
+        return (
+           <Navigator initialRoute={{name:defaultName,component:defaultComponent}}
+            configureScene={(route)=> {return Navigator.SceneConfigs.PushFromRight}}
+                      renderScene={(route,navigator)=>{
+                        let  Component= route.component;
+                        return <Component {...route.params} navigator={navigator}  />
+                      }}
+           />
+        );
+    }
 }
 
 
@@ -49,7 +36,7 @@ class List extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {id:2};
   }
 
   _pressButton() {
@@ -61,6 +48,9 @@ class List extends Component {
       navigator.push({
         name: 'Detail',
         component: Detail,
+          params:{
+            id:this.state.id
+          }
       })
     }
   }
