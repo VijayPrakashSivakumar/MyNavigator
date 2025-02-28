@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_1635572_servic_0.user" name="x_1635572_servic_0.user">c7a7ddbc83842210212b6260ceaad32f</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>aes.creator</sys_created_by>
+        <sys_created_on>2025-02-28 11:08:29</sys_created_on>
+        <sys_id>9ba7ddbc83842210212b6260ceaad330</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>c7a7ddbc83842210212b6260ceaad32f</sys_name>
+        <sys_package display_value="ServiceNow DEV" source="x_1635572_servic_0">12a79dbc83842210212b6260ceaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceNow DEV">12a79dbc83842210212b6260ceaad385</sys_scope>
+        <sys_update_name>sys_embedded_help_role_9ba7ddbc83842210212b6260ceaad330</sys_update_name>
+        <sys_updated_by>aes.creator</sys_updated_by>
+        <sys_updated_on>2025-02-28 11:08:29</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
